@@ -1,0 +1,17 @@
+.nav_container{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+nav{
+    color: white;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    background-color: red;
+
+}

@@ -1,0 +1,16 @@
+<div class="inputContainer">
+<div>
+  <mat-form-field appearance="fill">
+    <mat-label>celsius</mat-label>
+    <input matInput [(ngModel)]="celsius" (ngModelChange)="celFar()">
+  </mat-form-field>
+
+  <span>=</span>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Fahrenheit</mat-label>
+    <input matInput [(ngModel)]="fahrenheit" (ngModelChange)="farCel()">
+  </mat-form-field>
+
+</div>
+</div>

@@ -1,0 +1,16 @@
+<div class="inputContainer">
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>cm</mat-label>
+            <input matInput [(ngModel)]="cm" (ngModelChange)="cmPouce()">
+        </mat-form-field>
+
+        <span>=</span>
+
+        <mat-form-field appearance="fill">
+            <mat-label>pouce</mat-label>
+            <input matInput [(ngModel)]="pouce" (ngModelChange)="pouceCm()">
+        </mat-form-field>
+
+    </div>
+</div>

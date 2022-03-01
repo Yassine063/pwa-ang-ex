@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -10,16 +12,30 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatTabsModule } from '@angular/material/tabs';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
+import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
 import { AppComponent } from './app.component';
+import { TempConversionComponent } from './components/temp-conversion/temp-conversion.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
+import { MatSelectModule } from '@angular/material/select';
+import { DistanceConversionComponent } from './components/distance-conversion/distance-conversion.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TempConversionComponent,
+    DistanceConversionComponent
   ],
+
+  
+
   imports: [
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
@@ -29,12 +45,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatListModule,
     MatGridListModule,
     MatCardModule,
+    MatTabsModule,
     MatMenuModule,
-    MatFormFieldModule,
-    MatInputModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    AppRoutingModule,
+    MatRippleModule,
+    
+    MatSelectModule
+    
+    
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })
